@@ -1,18 +1,18 @@
-import React from "react";
+import React from "react"
 
-import classNames from "classnames";
-import { Link } from "gatsby";
+import classNames from "classnames"
+import { Link } from "gatsby"
 
-import { PAGINATION } from "@/constants";
+import { PAGINATION } from "@/constants"
 
-import * as styles from "./Pagination.module.scss";
+import * as styles from "./Pagination.module.scss"
 
 type Props = {
-  prevPagePath: string;
-  nextPagePath: string;
-  hasNextPage: boolean;
-  hasPrevPage: boolean;
-};
+  prevPagePath: string
+  nextPagePath: string
+  hasNextPage: boolean
+  hasPrevPage: boolean
+}
 
 const Pagination = ({
   prevPagePath,
@@ -22,11 +22,11 @@ const Pagination = ({
 }: Props) => {
   const prevClassName = classNames(styles.previousLink, {
     [styles.disable]: !hasPrevPage,
-  });
+  })
 
   const nextClassName = classNames(styles.nextLink, {
     [styles.disable]: !hasNextPage,
-  });
+  })
 
   return (
     <div className={styles.pagination}>
@@ -49,7 +49,7 @@ const Pagination = ({
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Pagination;
+export default Pagination

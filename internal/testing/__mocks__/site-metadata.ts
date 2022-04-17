@@ -1,5 +1,5 @@
-import author from "./author";
-import menu from "./menu";
+import author from "./author"
+import menu from "./menu"
 
 export default {
   site: {
@@ -14,4 +14,4 @@ export default {
       menu,
     },
   },
-};
+}

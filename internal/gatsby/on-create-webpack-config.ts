@@ -1,9 +1,9 @@
-import path from "path";
+import path from "path"
 
-import { CreateWebpackConfigArgs } from "gatsby";
-import { CompilerOptions } from "typescript";
+import { CreateWebpackConfigArgs } from "gatsby"
+import { CompilerOptions } from "typescript"
 
-import { compilerOptions } from "../../tsconfig.json";
+import { compilerOptions } from "../../tsconfig.json"
 
 const onCreateWebpackConfig = (
   (options: Pick<CompilerOptions, "paths">) =>
@@ -18,8 +18,8 @@ const onCreateWebpackConfig = (
           {},
         ),
       },
-    });
+    })
   }
-)(compilerOptions);
+)(compilerOptions)
 
-export { onCreateWebpackConfig };
+export { onCreateWebpackConfig }

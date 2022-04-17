@@ -1,8 +1,8 @@
-import Pagination from "./pagination";
+import Pagination from "./pagination"
 
 interface PageContext {
-  group?: string;
-  pagination: Pagination;
+  group?: string
+  pagination: Pagination
 }
 
-export default PageContext;
+export default PageContext

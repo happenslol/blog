@@ -1,3 +1,3 @@
-const increment = (n: number): number => n + 1;
+const increment = (n: number): number => n + 1
 
-export default increment;
+export default increment

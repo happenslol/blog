@@ -1,11 +1,11 @@
-import { CreatePagesArgs } from "gatsby";
+import { CreatePagesArgs } from "gatsby"
 
-import * as types from "../types";
+import * as types from "../types"
 
 export interface PostsQueryResult {
   allMarkdownRemark: {
-    edges?: Array<types.Edge>;
-  };
+    edges?: Array<types.Edge>
+  }
 }
 
 const postsQuery = async (graphql: CreatePagesArgs["graphql"]) => {
@@ -21,9 +21,9 @@ const postsQuery = async (graphql: CreatePagesArgs["graphql"]) => {
         }
       }
     }
-  `);
+  `)
 
-  return result?.data?.allMarkdownRemark;
-};
+  return result?.data?.allMarkdownRemark
+}
 
-export default postsQuery;
+export default postsQuery

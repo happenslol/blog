@@ -1,12 +1,12 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby"
 
 interface TagsQueryResult {
   allMarkdownRemark: {
     group: Array<{
-      fieldValue: string;
-      totalCount: number;
-    }>;
-  };
+      fieldValue: string
+      totalCount: number
+    }>
+  }
 }
 
 const useTagsList = () => {
@@ -25,9 +25,9 @@ const useTagsList = () => {
         }
       }
     `,
-  );
+  )
 
-  return allMarkdownRemark.group || [];
-};
+  return allMarkdownRemark.group || []
+}
 
-export default useTagsList;
+export default useTagsList

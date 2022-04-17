@@ -1,9 +1,9 @@
 interface Pagination {
-  currentPage: number;
-  prevPagePath: string;
-  nextPagePath: string;
-  hasPrevPage: boolean;
-  hasNextPage: boolean;
+  currentPage: number
+  prevPagePath: string
+  nextPagePath: string
+  hasPrevPage: boolean
+  hasNextPage: boolean
 }
 
-export default Pagination;
+export default Pagination

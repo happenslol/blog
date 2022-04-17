@@ -1,7 +1,7 @@
-import path from "path";
+import path from "path"
 
-import config from "./content/config.json";
-import * as types from "./internal/gatsby/types";
+import config from "./content/config.json"
+import * as types from "./internal/gatsby/types"
 
 export default {
   pathPrefix: config.pathPrefix,
@@ -43,13 +43,13 @@ export default {
               query: {
                 site: {
                   siteMetadata: {
-                    url: string;
-                  };
-                };
+                    url: string
+                  }
+                }
                 allMarkdownRemark: {
-                  edges: Array<types.Edge>;
-                };
-              };
+                  edges: Array<types.Edge>
+                }
+              }
             }) =>
               allMarkdownRemark.edges.map(({ node }) => ({
                 ...node.frontmatter,
@@ -196,4 +196,4 @@ export default {
     "gatsby-plugin-optimize-svgs",
     "gatsby-plugin-sass",
   ],
-};
+}

@@ -5,6 +5,6 @@ const toKebabCase = (str: string = ""): string =>
     .split(" ")
     .join("-")
     .split("_")
-    .join("-");
+    .join("-")
 
-export default toKebabCase;
+export default toKebabCase

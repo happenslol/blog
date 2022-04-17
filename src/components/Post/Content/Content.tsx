@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"
 
-import * as styles from "./Content.module.scss";
+import * as styles from "./Content.module.scss"
 
 interface Props {
-  title: string;
-  body: string;
+  title: string
+  body: string
 }
 
 const Content: React.FC<Props> = ({ body, title }: Props) => (
@@ -12,6 +12,6 @@ const Content: React.FC<Props> = ({ body, title }: Props) => (
     <h1 className={styles.title}>{title}</h1>
     <div className={styles.body} dangerouslySetInnerHTML={{ __html: body }} />
   </div>
-);
+)
 
-export default Content;
+export default Content

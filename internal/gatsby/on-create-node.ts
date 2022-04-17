@@ -1,32 +1,32 @@
-import { GatsbyNode } from "gatsby";
-import { createFilePath } from "gatsby-source-filesystem";
+import { GatsbyNode } from "gatsby"
+import { createFilePath } from "gatsby-source-filesystem"
 
-import * as constants from "./constants";
-import * as types from "./types";
-import * as utils from "./utils";
+import * as constants from "./constants"
+import * as types from "./types"
+import * as utils from "./utils"
 
 const onCreateNode: GatsbyNode["onCreateNode"] = ({
   node,
   actions,
   getNode,
 }) => {
-  const { createNodeField } = actions;
+  const { createNodeField } = actions
 
   if (node.internal.type === "MarkdownRemark") {
-    const { frontmatter, parent }: types.Edge["node"] = node;
-    const { tags, category, slug } = frontmatter || {};
+    const { frontmatter, parent }: types.Edge["node"] = node
+    const { tags, category, slug } = frontmatter || {}
 
     if (slug) {
-      const dirname = parent && getNode(parent)?.relativeDirectory;
+      const dirname = parent && getNode(parent)?.relativeDirectory
       const value =
         typeof dirname === "string"
           ? utils.concat("/", dirname, "/", slug)
-          : utils.concat("/", slug);
+          : utils.concat("/", slug)
 
-      createNodeField({ node, name: "slug", value });
+      createNodeField({ node, name: "slug", value })
     } else {
-      const value = createFilePath({ node, getNode });
-      createNodeField({ node, name: "slug", value });
+      const value = createFilePath({ node, getNode })
+      createNodeField({ node, name: "slug", value })
     }
 
     if (tags) {
@@ -37,9 +37,9 @@ const onCreateNode: GatsbyNode["onCreateNode"] = ({
           utils.toKebabCase(tag),
           "/",
         ),
-      );
+      )
 
-      createNodeField({ node, name: "tagSlugs", value });
+      createNodeField({ node, name: "tagSlugs", value })
     }
 
     if (category) {
@@ -48,11 +48,11 @@ const onCreateNode: GatsbyNode["onCreateNode"] = ({
         "/",
         utils.toKebabCase(category),
         "/",
-      );
+      )
 
-      createNodeField({ node, name: "categorySlug", value });
+      createNodeField({ node, name: "categorySlug", value })
     }
   }
-};
+}
 
-export { onCreateNode };
+export { onCreateNode }

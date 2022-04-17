@@ -1,15 +1,15 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, StaticQuery } from "gatsby"
 import {
   GatsbyImage,
   GatsbyImageProps,
   IGatsbyImageData,
-} from "gatsby-plugin-image";
-import { FileSystemNode } from "gatsby-source-filesystem";
+} from "gatsby-plugin-image"
+import { FileSystemNode } from "gatsby-source-filesystem"
 
 interface Props extends Omit<GatsbyImageProps, "image"> {
-  path: string;
+  path: string
 }
 
 interface Data {
@@ -17,11 +17,11 @@ interface Data {
     edges: Array<{
       node: FileSystemNode & {
         childImageSharp: {
-          gatsbyImageData: IGatsbyImageData;
-        };
-      };
-    }>;
-  };
+          gatsbyImageData: IGatsbyImageData
+        }
+      }
+    }>
+  }
 }
 
 const Image: FC<Props> = ({ path, ...rest }: Props) => (
@@ -43,20 +43,20 @@ const Image: FC<Props> = ({ path, ...rest }: Props) => (
       }
     `}
     render={(data: Data) => {
-      const { images: { edges = [] } = {} } = data;
-      const image = edges.find(({ node }) => node.absolutePath.includes(path));
+      const { images: { edges = [] } = {} } = data
+      const image = edges.find(({ node }) => node.absolutePath.includes(path))
 
       if (!image) {
-        return null;
+        return null
       }
 
       const {
         node: { childImageSharp },
-      } = image;
+      } = image
 
-      return <GatsbyImage {...rest} image={childImageSharp.gatsbyImageData} />;
+      return <GatsbyImage {...rest} image={childImageSharp.gatsbyImageData} />
     }}
   />
-);
+)
 
-export default Image;
+export default Image

@@ -1,12 +1,12 @@
-import { CreatePagesArgs } from "gatsby";
+import { CreatePagesArgs } from "gatsby"
 
 interface TagsQueryResult {
   allMarkdownRemark: {
     group: Array<{
-      fieldValue: string;
-      totalCount: number;
-    }>;
-  };
+      fieldValue: string
+      totalCount: number
+    }>
+  }
 }
 
 const tagsQuery = async (graphql: CreatePagesArgs["graphql"]) => {
@@ -23,9 +23,9 @@ const tagsQuery = async (graphql: CreatePagesArgs["graphql"]) => {
         }
       }
     }
-  `);
+  `)
 
-  return result?.data?.allMarkdownRemark?.group || [];
-};
+  return result?.data?.allMarkdownRemark?.group || []
+}
 
-export default tagsQuery;
+export default tagsQuery

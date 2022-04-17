@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react"
 
-import * as styles from "./Meta.module.scss";
+import * as styles from "./Meta.module.scss"
 
 interface Props {
-  date: string;
+  date: string
 }
 
 const Meta: React.FC<Props> = ({ date }: Props) => (
@@ -17,6 +17,6 @@ const Meta: React.FC<Props> = ({ date }: Props) => (
       })}
     </p>
   </div>
-);
+)
 
-export default Meta;
+export default Meta

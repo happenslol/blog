@@ -1,5 +1,5 @@
-import { ICONS } from "@/constants";
+import { ICONS } from "@/constants"
 
-const getIcon = (name: keyof typeof ICONS) => ICONS[name] || {};
+const getIcon = (name: keyof typeof ICONS) => ICONS[name] || {}
 
-export default getIcon;
+export default getIcon

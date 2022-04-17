@@ -1,4 +1,4 @@
-import path from "path";
+import path from "path"
 
 const templates = Object.freeze({
   indexTemplate: path.resolve(
@@ -17,6 +17,6 @@ const templates = Object.freeze({
   tagsTemplate: path.resolve("./src/templates/TagsTemplate/TagsTemplate.tsx"),
   pageTemplate: path.resolve("./src/templates/PageTemplate/PageTemplate.tsx"),
   postTemplate: path.resolve("./src/templates/PostTemplate/PostTemplate.tsx"),
-});
+})
 
-export default templates;
+export default templates

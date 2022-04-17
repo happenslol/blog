@@ -1,20 +1,20 @@
-import React from "react";
+import React from "react"
 
-import { useSiteMetadata } from "@/hooks";
+import { useSiteMetadata } from "@/hooks"
 
-import { Author } from "./Author";
-import { Contacts } from "./Contacts";
-import { Copyright } from "./Copyright";
-import { Menu } from "./Menu";
+import { Author } from "./Author"
+import { Contacts } from "./Contacts"
+import { Copyright } from "./Copyright"
+import { Menu } from "./Menu"
 
-import * as styles from "./Sidebar.module.scss";
+import * as styles from "./Sidebar.module.scss"
 
 type Props = {
-  isIndex?: boolean;
-};
+  isIndex?: boolean
+}
 
 const Sidebar = ({ isIndex }: Props) => {
-  const { author, copyright, menu } = useSiteMetadata();
+  const { author, copyright, menu } = useSiteMetadata()
 
   return (
     <div className={styles.sidebar}>
@@ -25,7 +25,7 @@ const Sidebar = ({ isIndex }: Props) => {
         <Copyright copyright={copyright} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar

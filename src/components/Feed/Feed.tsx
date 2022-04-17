@@ -1,14 +1,14 @@
-import React from "react";
+import React from "react"
 
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 
-import { Edge } from "@/types";
+import { Edge } from "@/types"
 
-import * as styles from "./Feed.module.scss";
+import * as styles from "./Feed.module.scss"
 
 type Props = {
-  edges: Array<Edge>;
-};
+  edges: Array<Edge>
+}
 
 const Feed: React.FC<Props> = ({ edges }: Props) => (
   <div className={styles.feed}>
@@ -48,6 +48,6 @@ const Feed: React.FC<Props> = ({ edges }: Props) => (
       </div>
     ))}
   </div>
-);
+)
 
-export default Feed;
+export default Feed

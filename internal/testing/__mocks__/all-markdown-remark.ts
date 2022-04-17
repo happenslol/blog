@@ -1,4 +1,4 @@
-import edges from "./edges";
-import group from "./group";
+import edges from "./edges"
+import group from "./group"
 
-export default { group, edges };
+export default { group, edges }

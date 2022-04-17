@@ -1,7 +1,7 @@
 interface Fields {
-  slug: string;
-  categorySlug: string;
-  tagSlugs?: Array<string>;
+  slug: string
+  categorySlug: string
+  tagSlugs?: Array<string>
 }
 
-export default Fields;
+export default Fields

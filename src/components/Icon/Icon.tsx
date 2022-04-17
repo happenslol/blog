@@ -1,15 +1,15 @@
-import React from "react";
+import React from "react"
 
-import { ICONS } from "@/constants";
+import { ICONS } from "@/constants"
 
-import * as styles from "./Icon.module.scss";
+import * as styles from "./Icon.module.scss"
 
 interface Props {
-  name: keyof typeof ICONS;
+  name: keyof typeof ICONS
   icon: {
-    viewBox?: string;
-    path?: string;
-  };
+    viewBox?: string
+    path?: string
+  }
 }
 
 const Icon: React.FC<Props> = ({ name, icon }: Props) => (
@@ -17,6 +17,6 @@ const Icon: React.FC<Props> = ({ name, icon }: Props) => (
     <title>{name}</title>
     <path d={icon.path} />
   </svg>
-);
+)
 
-export default Icon;
+export default Icon

@@ -7,4 +7,4 @@ export default {
     hasNextPage: true,
     hasPrevPage: true,
   },
-};
+}

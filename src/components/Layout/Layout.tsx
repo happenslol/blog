@@ -1,15 +1,15 @@
-import React from "react";
-import Helmet from "react-helmet";
+import React from "react"
+import Helmet from "react-helmet"
 
-import { useSiteMetadata } from "@/hooks";
+import { useSiteMetadata } from "@/hooks"
 
-import * as styles from "./Layout.module.scss";
+import * as styles from "./Layout.module.scss"
 
 interface Props {
-  title: string;
-  description?: string;
-  socialImage?: string;
-  children: React.ReactNode;
+  title: string
+  description?: string
+  socialImage?: string
+  children: React.ReactNode
 }
 
 const Layout: React.FC<Props> = ({
@@ -18,9 +18,9 @@ const Layout: React.FC<Props> = ({
   description,
   socialImage = "",
 }: Props) => {
-  const { author, url } = useSiteMetadata();
-  const metaImage = socialImage || author.photo;
-  const metaImageUrl = url + metaImage;
+  const { author, url } = useSiteMetadata()
+  const metaImage = socialImage || author.photo
+  const metaImageUrl = url + metaImage
 
   return (
     <div className={styles.layout}>
@@ -37,7 +37,7 @@ const Layout: React.FC<Props> = ({
       </Helmet>
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

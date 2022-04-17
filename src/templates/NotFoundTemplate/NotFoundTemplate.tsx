@@ -1,12 +1,12 @@
-import React from "react";
+import React from "react"
 
-import { Layout } from "@/components/Layout";
-import { Page } from "@/components/Page";
-import { Sidebar } from "@/components/Sidebar";
-import { useSiteMetadata } from "@/hooks";
+import { Layout } from "@/components/Layout"
+import { Page } from "@/components/Page"
+import { Sidebar } from "@/components/Sidebar"
+import { useSiteMetadata } from "@/hooks"
 
 const NotFoundTemplate: React.FC = () => {
-  const { title, subtitle } = useSiteMetadata();
+  const { title, subtitle } = useSiteMetadata()
 
   return (
     <Layout title={`Not Found - ${title}`} description={subtitle}>
@@ -15,7 +15,7 @@ const NotFoundTemplate: React.FC = () => {
         <p>You just hit a route that doesn't exist... the sadness.</p>
       </Page>
     </Layout>
-  );
-};
+  )
+}
 
-export default NotFoundTemplate;
+export default NotFoundTemplate

@@ -1,34 +1,34 @@
-import React from "react";
+import React from "react"
 
-import { graphql } from "gatsby";
+import { graphql } from "gatsby"
 
-import { Feed } from "@/components/Feed";
-import { Layout } from "@/components/Layout";
-import { Page } from "@/components/Page";
-import { Pagination } from "@/components/Pagination";
-import { Sidebar } from "@/components/Sidebar";
-import { useSiteMetadata } from "@/hooks";
-import { AllMarkdownRemark, PageContext } from "@/types";
+import { Feed } from "@/components/Feed"
+import { Layout } from "@/components/Layout"
+import { Page } from "@/components/Page"
+import { Pagination } from "@/components/Pagination"
+import { Sidebar } from "@/components/Sidebar"
+import { useSiteMetadata } from "@/hooks"
+import { AllMarkdownRemark, PageContext } from "@/types"
 
 interface Props {
   data: {
-    allMarkdownRemark: AllMarkdownRemark;
-  };
-  pageContext: PageContext;
+    allMarkdownRemark: AllMarkdownRemark
+  }
+  pageContext: PageContext
 }
 
 const CategoryTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
+  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
 
-  const { group, pagination } = pageContext;
+  const { group, pagination } = pageContext
   const { currentPage, prevPagePath, nextPagePath, hasPrevPage, hasNextPage } =
-    pagination;
+    pagination
 
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.allMarkdownRemark
   const pageTitle =
     currentPage > 0
       ? `${group} - Page ${currentPage} - ${siteTitle}`
-      : `${group} - ${siteTitle}`;
+      : `${group} - ${siteTitle}`
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
@@ -43,8 +43,8 @@ const CategoryTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
         />
       </Page>
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query CategoryTemplate($group: String, $limit: Int!, $offset: Int!) {
@@ -76,6 +76,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default CategoryTemplate;
+export default CategoryTemplate

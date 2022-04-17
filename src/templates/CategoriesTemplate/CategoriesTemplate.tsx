@@ -1,16 +1,16 @@
-import React from "react";
+import React from "react"
 
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 
-import { Layout } from "@/components/Layout";
-import { Page } from "@/components/Page";
-import { Sidebar } from "@/components/Sidebar";
-import { useCategoriesList, useSiteMetadata } from "@/hooks";
-import { toKebabCase } from "@/utils";
+import { Layout } from "@/components/Layout"
+import { Page } from "@/components/Page"
+import { Sidebar } from "@/components/Sidebar"
+import { useCategoriesList, useSiteMetadata } from "@/hooks"
+import { toKebabCase } from "@/utils"
 
 const CategoriesTemplate: React.FC = () => {
-  const { title, subtitle } = useSiteMetadata();
-  const categories = useCategoriesList();
+  const { title, subtitle } = useSiteMetadata()
+  const categories = useCategoriesList()
 
   return (
     <Layout title={`Categories - ${title}`} description={subtitle}>
@@ -27,7 +27,7 @@ const CategoriesTemplate: React.FC = () => {
         </ul>
       </Page>
     </Layout>
-  );
-};
+  )
+}
 
-export default CategoriesTemplate;
+export default CategoriesTemplate

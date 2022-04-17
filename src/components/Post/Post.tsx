@@ -1,25 +1,25 @@
-import React from "react";
+import React from "react"
 
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 
-import type { Node } from "@/types";
+import type { Node } from "@/types"
 
-import { Author } from "./Author";
-import { Comments } from "./Comments";
-import { Content } from "./Content";
-import { Meta } from "./Meta";
-import { Tags } from "./Tags";
+import { Author } from "./Author"
+import { Comments } from "./Comments"
+import { Content } from "./Content"
+import { Meta } from "./Meta"
+import { Tags } from "./Tags"
 
-import * as styles from "./Post.module.scss";
+import * as styles from "./Post.module.scss"
 
 interface Props {
-  post: Node;
+  post: Node
 }
 
 const Post: React.FC<Props> = ({ post }: Props) => {
-  const { html } = post;
-  const { tagSlugs, slug } = post.fields;
-  const { tags, title, date } = post.frontmatter;
+  const { html } = post
+  const { tagSlugs, slug } = post.fields
+  const { tags, title, date } = post.frontmatter
 
   return (
     <div className={styles.post}>
@@ -41,7 +41,7 @@ const Post: React.FC<Props> = ({ post }: Props) => {
         <Comments postSlug={slug} postTitle={post.frontmatter.title} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Post;
+export default Post

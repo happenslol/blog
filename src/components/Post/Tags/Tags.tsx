@@ -1,13 +1,13 @@
-import React from "react";
+import React from "react"
 
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 
-import * as styles from "./Tags.module.scss";
+import * as styles from "./Tags.module.scss"
 
 type Props = {
-  tags: string[];
-  tagSlugs: string[];
-};
+  tags: string[]
+  tagSlugs: string[]
+}
 
 const Tags = ({ tags, tagSlugs }: Props) => (
   <div className={styles.tags}>
@@ -23,6 +23,6 @@ const Tags = ({ tags, tagSlugs }: Props) => (
         : null}
     </ul>
   </div>
-);
+)
 
-export default Tags;
+export default Tags

@@ -7,4 +7,4 @@ export default [
     fieldValue: "design inspiration",
     totalCount: 1,
   },
-];
+]

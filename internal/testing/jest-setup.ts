@@ -1,1 +1,1 @@
-jest.mock("gatsby", () => jest.requireActual("./__mocks__/gatsby").default);
+jest.mock("gatsby", () => jest.requireActual("./__mocks__/gatsby").default)

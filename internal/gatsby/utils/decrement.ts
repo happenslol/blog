@@ -1,3 +1,3 @@
-const decrement = (n: number): number => n - 1;
+const decrement = (n: number): number => n - 1
 
-export default decrement;
+export default decrement

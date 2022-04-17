@@ -1,12 +1,12 @@
-import React from "react";
+import React from "react"
 
-import { useSiteMetadata } from "@/hooks";
-import { getContactHref } from "@/utils";
+import { useSiteMetadata } from "@/hooks"
+import { getContactHref } from "@/utils"
 
-import * as styles from "./Author.module.scss";
+import * as styles from "./Author.module.scss"
 
 const Author = () => {
-  const { author } = useSiteMetadata();
+  const { author } = useSiteMetadata()
 
   return (
     <div className={styles.author}>
@@ -22,7 +22,7 @@ const Author = () => {
         </a>
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default Author;
+export default Author

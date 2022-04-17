@@ -1,12 +1,12 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby"
 
 interface CategoriesQueryResult {
   allMarkdownRemark: {
     group: Array<{
-      fieldValue: string;
-      totalCount: number;
-    }>;
-  };
+      fieldValue: string
+      totalCount: number
+    }>
+  }
 }
 
 const useCategoriesList = () => {
@@ -25,9 +25,9 @@ const useCategoriesList = () => {
         }
       }
     `,
-  );
+  )
 
-  return allMarkdownRemark.group ?? [];
-};
+  return allMarkdownRemark.group ?? []
+}
 
-export default useCategoriesList;
+export default useCategoriesList

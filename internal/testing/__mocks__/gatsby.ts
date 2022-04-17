@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-const gatsby = jest.requireActual("gatsby");
+const gatsby = jest.requireActual("gatsby")
 
 export default {
   ...gatsby,
@@ -25,4 +25,4 @@ export default {
     ),
   StaticQuery: jest.fn(),
   useStaticQuery: jest.fn(),
-};
+}

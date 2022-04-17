@@ -1,19 +1,19 @@
-import React from "react";
+import React from "react"
 
-import { DiscussionEmbed } from "disqus-react";
+import { DiscussionEmbed } from "disqus-react"
 
-import { useSiteMetadata } from "@/hooks";
+import { useSiteMetadata } from "@/hooks"
 
 interface Props {
-  postTitle: string;
-  postSlug: string;
+  postTitle: string
+  postSlug: string
 }
 
 const Comments: React.FC<Props> = ({ postTitle, postSlug }: Props) => {
-  const { url, disqusShortname } = useSiteMetadata();
+  const { url, disqusShortname } = useSiteMetadata()
 
   if (!disqusShortname) {
-    return null;
+    return null
   }
 
   return (
@@ -25,7 +25,7 @@ const Comments: React.FC<Props> = ({ postTitle, postSlug }: Props) => {
         title: postTitle,
       }}
     />
-  );
-};
+  )
+}
 
-export default Comments;
+export default Comments

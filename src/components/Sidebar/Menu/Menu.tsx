@@ -1,15 +1,15 @@
-import React from "react";
+import React from "react"
 
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 
-import * as styles from "./Menu.module.scss";
+import * as styles from "./Menu.module.scss"
 
 type Props = {
   menu: Array<{
-    label: string;
-    path: string;
-  }>;
-};
+    label: string
+    path: string
+  }>
+}
 
 const Menu: React.FC<Props> = ({ menu }: Props) => (
   <nav className={styles.menu}>
@@ -27,6 +27,6 @@ const Menu: React.FC<Props> = ({ menu }: Props) => (
       ))}
     </ul>
   </nav>
-);
+)
 
-export default Menu;
+export default Menu

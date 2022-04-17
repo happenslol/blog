@@ -1,32 +1,32 @@
-import React from "react";
+import React from "react"
 
-import { graphql } from "gatsby";
+import { graphql } from "gatsby"
 
-import { Feed } from "@/components/Feed";
-import { Layout } from "@/components/Layout";
-import { Page } from "@/components/Page";
-import { Pagination } from "@/components/Pagination";
-import { Sidebar } from "@/components/Sidebar";
-import { useSiteMetadata } from "@/hooks";
-import { AllMarkdownRemark, PageContext } from "@/types";
+import { Feed } from "@/components/Feed"
+import { Layout } from "@/components/Layout"
+import { Page } from "@/components/Page"
+import { Pagination } from "@/components/Pagination"
+import { Sidebar } from "@/components/Sidebar"
+import { useSiteMetadata } from "@/hooks"
+import { AllMarkdownRemark, PageContext } from "@/types"
 
 interface Props {
   data: {
-    allMarkdownRemark: AllMarkdownRemark;
-  };
-  pageContext: PageContext;
+    allMarkdownRemark: AllMarkdownRemark
+  }
+  pageContext: PageContext
 }
 
 const IndexTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
+  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
 
-  const { pagination } = pageContext;
+  const { pagination } = pageContext
   const { currentPage, hasNextPage, hasPrevPage, prevPagePath, nextPagePath } =
-    pagination;
+    pagination
 
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.allMarkdownRemark
   const pageTitle =
-    currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
+    currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
@@ -41,8 +41,8 @@ const IndexTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
         />
       </Page>
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query IndexTemplate($limit: Int!, $offset: Int!) {
@@ -68,6 +68,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default IndexTemplate;
+export default IndexTemplate

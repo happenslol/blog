@@ -1,11 +1,11 @@
-import { CreatePagesArgs } from "gatsby";
+import { CreatePagesArgs } from "gatsby"
 
 interface MetadataQueryResult {
   site: {
     siteMetadata: {
-      postsLimit?: number;
-    };
-  };
+      postsLimit?: number
+    }
+  }
 }
 
 const metadataQuery = async (graphql: CreatePagesArgs["graphql"]) => {
@@ -17,9 +17,9 @@ const metadataQuery = async (graphql: CreatePagesArgs["graphql"]) => {
         }
       }
     }
-  `);
+  `)
 
-  return result?.data?.site.siteMetadata ?? {};
-};
+  return result?.data?.site.siteMetadata ?? {}
+}
 
-export default metadataQuery;
+export default metadataQuery

@@ -1,6 +1,6 @@
-import type { Config } from "@jest/types";
+import type { Config } from "@jest/types"
 
-import swc from "./swc-config";
+import swc from "./swc-config"
 
 const jestConfig: Config.InitialOptions = {
   testEnvironment: "jsdom",
@@ -31,6 +31,6 @@ const jestConfig: Config.InitialOptions = {
   setupFiles: ["<rootDir>/internal/testing/jest-setup.ts"],
   testPathIgnorePatterns: ["node_modules", ".cache", "public"],
   transformIgnorePatterns: ["node_modules/(?!(gatsby)/)"],
-};
+}
 
-export default jestConfig;
+export default jestConfig

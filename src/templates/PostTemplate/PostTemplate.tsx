@@ -1,23 +1,23 @@
-import React from "react";
+import React from "react"
 
-import { graphql } from "gatsby";
+import { graphql } from "gatsby"
 
-import { Layout } from "@/components/Layout";
-import { Post } from "@/components/Post";
-import { useSiteMetadata } from "@/hooks";
-import { Node } from "@/types";
+import { Layout } from "@/components/Layout"
+import { Post } from "@/components/Post"
+import { useSiteMetadata } from "@/hooks"
+import { Node } from "@/types"
 
 interface Props {
   data: {
-    markdownRemark: Node;
-  };
+    markdownRemark: Node
+  }
 }
 
 const PostTemplate: React.FC<Props> = ({ data }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
-  const { frontmatter } = data.markdownRemark;
-  const { title, description = "", socialImage } = frontmatter;
-  const metaDescription = description || siteSubtitle;
+  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
+  const { frontmatter } = data.markdownRemark
+  const { title, description = "", socialImage } = frontmatter
+  const metaDescription = description || siteSubtitle
 
   return (
     <Layout
@@ -27,8 +27,8 @@ const PostTemplate: React.FC<Props> = ({ data }: Props) => {
     >
       <Post post={data.markdownRemark} />
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query PostTemplate($slug: String!) {
@@ -48,6 +48,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default PostTemplate;
+export default PostTemplate

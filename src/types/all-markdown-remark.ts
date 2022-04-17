@@ -1,11 +1,11 @@
-import Edge from "./edge";
+import Edge from "./edge"
 
 interface AllMarkdownRemark {
-  edges: Array<Edge>;
+  edges: Array<Edge>
   group: Array<{
-    fieldValue: string;
-    totalCount: number;
-  }>;
+    fieldValue: string
+    totalCount: number
+  }>
 }
 
-export default AllMarkdownRemark;
+export default AllMarkdownRemark

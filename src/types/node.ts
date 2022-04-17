@@ -1,11 +1,11 @@
-import Fields from "./fields";
-import Frontmatter from "./frontmatter";
+import Fields from "./fields"
+import Frontmatter from "./frontmatter"
 
 interface Node {
-  id: string;
-  fields: Fields;
-  frontmatter: Frontmatter;
-  html: string;
+  id: string
+  fields: Fields
+  frontmatter: Frontmatter
+  html: string
 }
 
-export default Node;
+export default Node

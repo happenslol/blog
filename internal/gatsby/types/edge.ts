@@ -1,27 +1,27 @@
-import { Node as GatsbyNode } from "gatsby";
+import { Node as GatsbyNode } from "gatsby"
 
 interface Frontmatter {
-  date?: string;
-  slug?: string;
-  template?: string;
-  category?: string;
-  description?: string;
-  tags?: Array<string>;
+  date?: string
+  slug?: string
+  template?: string
+  category?: string
+  description?: string
+  tags?: Array<string>
 }
 
 interface Fields {
-  slug?: string;
-  categorySlug?: string;
-  tagSlugs?: Array<string>;
+  slug?: string
+  categorySlug?: string
+  tagSlugs?: Array<string>
 }
 
 interface Node extends GatsbyNode {
-  fields?: Fields;
-  frontmatter?: Frontmatter;
+  fields?: Fields
+  frontmatter?: Frontmatter
 }
 
 interface Edge {
-  node: Node;
+  node: Node
 }
 
-export default Edge;
+export default Edge

@@ -4,4 +4,4 @@ export default {
   github: "#",
   twitter: "#",
   telegram: "#",
-};
+}
